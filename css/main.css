@@ -1,0 +1,120 @@
+:root {
+    --colour-bg: white;
+    --colour-fg: black;
+    --font-body: monospace;
+    --font-title: sans-serif;
+
+    --font-body-size: 15pt;
+
+    --spacing-vertical: 5vh;
+    --spacing-horizontal: 5vw;
+
+    font-family: var(--font-body);
+    font-size: var(--font-body-size);
+}
+
+body {
+    background-color: var(--colour-bg);
+    color: var(--colour-fg);
+    display: block;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-title);
+    text-transform: uppercase;
+}
+
+p {
+    text-justify: newspaper;
+    text-align: justify;
+    text-wrap-style: pretty;
+}
+
+.list-post {
+    list-style-type: none;
+}
+
+.list-post-elem a {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 90%;
+    margin: 0;
+    padding: 0;
+}
+
+.list-post-elem a time {
+    font-size: 10pt;
+}
+
+.main-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: auto;
+    padding: var(--spacing-vertical) var(--spacing-horizontal);
+
+    /* background-color: gray; */
+}
+
+.main-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: auto;
+    padding: var(--spacing-vertical) var(--spacing-horizontal);
+
+    /* background-color: gray; */
+}
+
+.main-header nav ul {
+    list-style-type: none;
+    display: inline;
+}
+
+.main-header-entry {
+    display: inline;
+}
+
+.container-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: var(--spacing-vertical);
+}
+
+.container-header h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.post-tags {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.post-tag {
+    display: inline;
+    margin: 0;
+    padding: 0 1%;
+    text-transform: lowercase;
+}
+
+.container {
+    max-width: max(500px, 70vw);
+    padding: 0;
+    margin: auto;
+    min-height: 75vh;
+}

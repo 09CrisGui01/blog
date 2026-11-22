@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<main class="container">
+    <header class="container-header">
+        <h1>Blog Posts</h1>
+    </header>
+    <section>
+        <ul class="list-post">
+            {% assign posts = site.posts | sort: "date" %}
+            {% for post in posts %}
+            <li class="list-post-elem">
+                <a href="/blog/{{post.slug}}">
+                    <p>{{post.title}}</p>
+                    <time datetime="{{post.date}}">{{post.date | date: "%-d %B %Y"}}</time>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+</main>
