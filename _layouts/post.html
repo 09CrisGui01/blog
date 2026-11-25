@@ -1,23 +1,23 @@
 ---
 layout: default
 ---
-<main class="container">
+<main>
     <article>
-        <header class="container-header">
+        <header class="post-header">
             {% if page.tags %}
-            <ul class="post-tags">
+            <ul class="discrete-list tags-list">
                 {% for tag in page.tags %}
-                <li class="post-tag">{{tag}}</li>
+                <li>{{tag}}</li>
                 {% endfor %}
             </ul>
             {% endif %}
             <h1>{{page.title}}</h1>
         </header>
-        <section>
+        <section class="post-section">
             {{content}}
         </section>
-        <footer class="container-footer">
-            <p>Article written by me.</p>
+        <footer class="post-footer">
+            <p>Article written by {{site.author.fullname}}.</p>
             <time datetime="{{page.date}}">{{page.date | date: "%-d %B %Y"}}</time>
         </footer>
     </article>
